@@ -1,0 +1,42 @@
+Rust Overview
+--------------
+Rust is a systems - level programming language. 
+"[Rust] deals with low-level detials of memory management, data representation, and concurryency".
+
+" Rust is a language designed to guide you naturally towards reliable code that is efficient in terms of speed and mmemory usage. 
+
+The main tooling within the Rust ecosystem is: 
+
+rustic - The compiler whihc takes your Rust code and compiles it into binary (machine readable code)
+
+rustup - The command line utility to install and update Rust 
+
+cargo - The Rust build system and package manager 
+-- use cargo new "any new project" to make a new project/ directory 
+
+WHEN CREATING A NEW PROJECT!
+----------------------------
+in the terminal 
+- cargo new kvstore
+The main.rs file is the default entry point for your application.
+The Cargo.toml file is the manifest used by cargo to managne your project metadata. Thi is is similar to a package dot json file 
+
+to see the output
+step 1. rustc ./src/main.rs
+step 2. ls 
+step 3. ./main  --> you should see Hello, world!
+
+
+Basics of rustic
+----------------
+Variables in Rust
+- You can declare variables using the let, const, or static keywords: 
+- exampls 
+let my_variable = 0;
+const MY_CONSTANT: u8 = 0;
+static MY_STATIC: u8 = 0;
+
+By default, all variables are immutable. You can make a variable mutable by using mut keyword: 
+example 
+
+let mut my_mutable_variable = 0;

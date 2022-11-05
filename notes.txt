@@ -16,8 +16,12 @@ cargo - The Rust build system and package manager
 
 WHEN CREATING A NEW PROJECT!
 ----------------------------
-in the terminal 
+in the terminal type: 
 - cargo new kvstore
+this will create a binary (application) `kvstore` package
+
+to typecheck 
+- cargo check
 The main.rs file is the default entry point for your application.
 The Cargo.toml file is the manifest used by cargo to managne your project metadata. Thi is is similar to a package dot json file 
 

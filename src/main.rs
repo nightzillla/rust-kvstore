@@ -1,3 +1,6 @@
 fn main() {
-    println!("Hello, world!");
+    let mut arguments: Args = std::env::args().skip(1);
+    let key = arguments.next();
 }
+
+ 

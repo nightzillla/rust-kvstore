@@ -48,3 +48,10 @@ example
 let mut my_mutable_variable = 0;
 let name = *note if mut is not in front of name it is immutable
 let mut name = *note this means the variable can change
+
+
+let is a declarition 
+*note when you type     let mut name = String::new
+it will turn into this  let mut name: fn new() -> String = String::new();
+
+by using immutable variables that is going eliminate having to go and track down how values change throughout your code.

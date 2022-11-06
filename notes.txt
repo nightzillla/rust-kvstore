@@ -11,7 +11,7 @@ rustic - The compiler whihc takes your Rust code and compiles it into binary (ma
 
 rustup - The command line utility to install and update Rust 
 
-cargo - The Rust build system and package manager 
+cargo - is rust package manager 
 -- use cargo new "any new project" to make a new project/ directory 
 
 WHEN CREATING A NEW PROJECT!
@@ -23,7 +23,7 @@ this will create a binary (application) `kvstore` package
 to typecheck 
 - cargo check
 The main.rs file is the default entry point for your application.
-The Cargo.toml file is the manifest used by cargo to managne your project metadata. Thi is is similar to a package dot json file 
+The Cargo.toml file is the manifest used by cargo to managne your project metadata. This is similar to a package dot json file 
 
 to see the output
 step 1. rustc ./src/main.rs

@@ -14,6 +14,8 @@ rustup - The command line utility to install and update Rust
 cargo - is rust package manager 
 -- use cargo new "any new project" to make a new project/ directory 
 
+.toml - tom's obvious minimal language 
+
 WHEN CREATING A NEW PROJECT!
 ----------------------------
 in the terminal type: 

@@ -1,6 +1,15 @@
+#![allow(unused)]
+
+use std::io;
+use rand::Rng;
+use std::io::{Write, BufReader, BufRead, ErrorKind};
+use std::fs::File;
+use std::cmp::Ordering;
+
 fn main() {
-    let mut arguments: Args = std::env::args().skip(1);
-    let key = arguments.next();
+    println!("What is your name?");
+    let mut 
+    println!("Hello, world!");
 }
 
  

@@ -46,3 +46,5 @@ By default, all variables are immutable. You can make a variable mutable by usin
 example 
 
 let mut my_mutable_variable = 0;
+let name = *note if mut is not in front of name it is immutable
+let mut name = *note this means the variable can change

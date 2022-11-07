@@ -26,6 +26,7 @@ fn main(){
     // numbers_out_put();
     // greeting_main();
     numbers();
+    random_nums();
 
 } // end of main
 
@@ -66,5 +67,10 @@ fn numbers(){
     print!("5 / 4 = {}\n", num_3 / num_4);
     print!("5 % 4 = {}\n", num_3 % num_4);
 } // end of numbers
+
+fn random_nums(){
+    let random_num = rand::thread_rng().gen_range(1..101);
+    print!("Random number is : {}\n", random_num);
+}
 
  

@@ -23,13 +23,14 @@ fn main(){
         .expect("Age wasn't assigned a number");
     age = age + 1;
     println!("I'm {} and I want ${}", age, ONE_MIL);
-    // numbers_out_put();
+    numbers_out_put();
     // greeting_main();
     numbers();
     random_nums();
     birthday();
     vote();
     match_nums();
+    match_age();
 } // end of main
 
 fn greeting_main(){
@@ -101,10 +102,20 @@ fn vote() {
 fn match_nums(){
     let age2: i32 = 8;
     match age2 {
-        1..=18 => print!("Important Birthday"),
-        21 | 50 => print!("Important Birthday"),
+        1..=18 => print!("Your age is {} Important Birthday! \n", age2),
+        21 | 50 => print!("21 - 50 Important Birthday"),
         65..=i32::MAX => print!("Important Birthday"),
         _ => print!("Not an Important Birthday"),
+    };
+}
+
+fn match_age(){
+    let my_age: i32 =18;
+    let voting_age = 18;
+    match my_age.cmp(&voting_age){
+        Ordering::Less => print!("Can't vote!"),
+        Ordering::Greater => print!("Can vote!"),
+        Ordering::Equal => print!("Your age is {}, you gained access to vote!", my_age),
     };
 }
 

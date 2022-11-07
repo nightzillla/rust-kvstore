@@ -31,6 +31,7 @@ fn main(){
     vote();
     match_nums();
     match_age();
+    arrays(); 
 } // end of main
 
 fn greeting_main(){
@@ -69,12 +70,12 @@ fn numbers(){
     print!("5 * 4 = {}\n", num_3 * num_4);
     print!("5 / 4 = {}\n", num_3 / num_4);
     print!("5 % 4 = {}\n", num_3 % num_4);
-} // end of numbers
+}// end of numbers
 
 fn random_nums(){
     let random_num = rand::thread_rng().gen_range(1..101);
     print!("Random number is : {}\n", random_num);
-}
+}// end of random_nums
 
 fn birthday(){
     let age: i32 = 8;
@@ -87,7 +88,7 @@ fn birthday(){
     } else {
         print!("Not an Important Birthday\n");
     }
-}
+}// end of birthday
 
 fn vote() {
     let mut my_age = 47;
@@ -97,7 +98,7 @@ fn vote() {
         false
     };
     print!("Can Vote : {}\n", can_vote);
-}
+}// end of vote
 
 fn match_nums(){
     let age2: i32 = 8;
@@ -107,7 +108,7 @@ fn match_nums(){
         65..=i32::MAX => print!("Important Birthday"),
         _ => print!("Not an Important Birthday"),
     };
-}
+}// end of match_nums
 
 fn match_age(){
     let my_age: i32 =18;
@@ -115,8 +116,27 @@ fn match_age(){
     match my_age.cmp(&voting_age){
         Ordering::Less => print!("Can't vote!"),
         Ordering::Greater => print!("Can vote!"),
-        Ordering::Equal => print!("Your age is {}, you gained access to vote!", my_age),
+        Ordering::Equal => print!("Your age is {}, you gained access to vote!\n", my_age),
     };
+}// end of match_age
+
+fn arrays(){
+    let arr_1: [i32; 9] = [1,2,3,4,5,6,7,8,9];
+    println!("1st : {}", arr_1[0]);
+    println!("Length : {}", arr_1.len());
+    // Loop
+    let mut loop_idx =0;
+    loop {
+        if arr_1[loop_idx] % 2 == 0{
+            loop_idx +=1;
+            continue;
+        }
+        if arr_1[loop_idx] == 9 {
+            break;
+        }
+        println!("Val : {} ", arr_1[loop_idx]);
+        loop_idx +=1;
+    }
 }
 
  

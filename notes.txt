@@ -5,6 +5,8 @@ Rust is a systems - level programming language.
 
 " Rust is a language designed to guide you naturally towards reliable code that is efficient in terms of speed and mmemory usage. 
 
+Rust is a statically type meaning all the types must be defined
+
 The main tooling within the Rust ecosystem is: 
 
 rustic - The compiler whihc takes your Rust code and compiles it into binary (machine readable code)

@@ -51,13 +51,20 @@ fn numbers_out_put(){
 fn booleans(){
     let is_true: bool = true;
     let my_grade = 'A';
-}
+} // end of booleans
 
 fn numbers(){
     let num_1: f32 = 1.111111111111111;
-    print!("f32 : {}\n", num_1 + 0.111111111111111);
+    print!("f32 : {}", num_1 + 0.111111111111111);
     let num_2: f64 = 1.111111111111111;
     print!("f64 : {}", num_2 + 0.111111111111111);
-}
+    let num_3: u32 = 5;
+    let num_4: u32 = 4;
+    print!("5 + 4 = {}\n", num_3 + num_4);
+    print!("5 - 4 = {}\n", num_3 - num_4);
+    print!("5 * 4 = {}\n", num_3 * num_4);
+    print!("5 / 4 = {}\n", num_3 / num_4);
+    print!("5 % 4 = {}\n", num_3 % num_4);
+} // end of numbers
 
  

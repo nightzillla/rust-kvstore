@@ -27,7 +27,9 @@ fn main(){
     // greeting_main();
     numbers();
     random_nums();
-
+    birthday();
+    vote();
+    match_nums();
 } // end of main
 
 fn greeting_main(){
@@ -71,6 +73,39 @@ fn numbers(){
 fn random_nums(){
     let random_num = rand::thread_rng().gen_range(1..101);
     print!("Random number is : {}\n", random_num);
+}
+
+fn birthday(){
+    let age: i32 = 8;
+    if (age >= 1) && (age <= 18){
+        print!("Important Birthday\n")
+    } else if (age == 21) || (age == 50){
+        print!("Important Birthday\n");
+    } else if age >= 65 {
+        print!("Important Birthday\n");
+    } else {
+        print!("Not an Important Birthday\n");
+    }
+}
+
+fn vote() {
+    let mut my_age = 47;
+    let can_vote = if my_age >= 18{
+        true
+    } else {
+        false
+    };
+    print!("Can Vote : {}\n", can_vote);
+}
+
+fn match_nums(){
+    let age2: i32 = 8;
+    match age2 {
+        1..=18 => print!("Important Birthday"),
+        21 | 50 => print!("Important Birthday"),
+        65..=i32::MAX => print!("Important Birthday"),
+        _ => print!("Not an Important Birthday"),
+    };
 }
 
  

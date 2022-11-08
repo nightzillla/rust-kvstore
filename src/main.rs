@@ -3,6 +3,7 @@
 
 use core::num;
 use std::io;
+use std::str::SplitWhitespace;
 use rand::Rng;
 use std::io::{Write, BufReader, BufRead, ErrorKind};
 use std::fs::File;
@@ -32,6 +33,10 @@ fn main(){
     match_nums();
     match_age();
     arrays(); 
+    while_loops();
+    for_loops();
+    tuple(); 
+    mut_string();
 } // end of main
 
 fn greeting_main(){
@@ -137,6 +142,48 @@ fn arrays(){
         println!("Val : {} ", arr_1[loop_idx]);
         loop_idx +=1;
     }
-}
+}// end of arrays
 
+fn while_loops(){
+    let arr_1: [i32; 9] = [1,2,3,4,5,6,7,8,9];
+    let mut loop_idx =0;
+    while loop_idx < arr_1.len(){
+        println!("Arr : {}", arr_1[loop_idx]);
+        loop_idx +=1;
+    }
+}// end of while_loops
+
+fn for_loops(){
+    let arr_1: [i32; 9] = [1,2,3,4,5,6,7,8,9];
+    let mut loop_idx =0;
+    // you have to type 
+    // for val in arr_1.iter()
+    // it will format in this below 
+    for val in arr_1.iter(){
+        println!("Val : {}", val);
+    }
+}// end for_loops
+
+fn tuple() {
+    let my_tuple: (u8, String, f64) = (47, "Derek".to_string(), 50_000.00);
+    println!("Name : {}", my_tuple.1);
+    let(v1, v2, v3) = my_tuple;
+    println!("Age : {}", v1); 
+}// end of tuple 
+
+fn mut_string(){
+    // you have to type
+    // let mut st1 = String::new();
+    // it will format in this below
+    let mut st1 = String::new();
+    st1.push('A');
+    st1.push_str("word\n");
+    // for word in st1.split_whitespace()
+    for word in st1.split_whitespace(){
+        println!("{}\n", word);
+    }
+    let st2 = st1.replace("A", "Another ");
+    println!("{}\n", st2);
+} // end of mut_string
+ 
  

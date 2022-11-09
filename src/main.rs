@@ -1,6 +1,5 @@
 #![allow(unused)]
 
-
 use core::num;
 use std::io;
 use std::str::SplitWhitespace;
@@ -37,6 +36,10 @@ fn main(){
     for_loops();
     tuple(); 
     mut_string();
+    strings();
+    casting();
+    enums();
+    vectors();
 } // end of main
 
 fn greeting_main(){
@@ -186,4 +189,84 @@ fn mut_string(){
     println!("{}\n", st2);
 } // end of mut_string
  
- 
+fn strings(){
+    let st3: String = String::from("x r t b h k k a m c");
+    let mut v1: Vec<char> = st3.chars().collect();
+    v1.sort();
+    // dedup removes duplets
+    v1.dedup();
+    for char in v1 {
+        println!("{}", char);
+    }
+    let st4: &str = "Random string";
+    let mut st5: String = st4.to_string();
+    println!("{}", st5);
+    let byte_arr1 = st5.as_bytes();
+    let st6 = &st5[0..6];
+    println!("String length : {}", st6.len());
+    st5.clear();
+    let st6 = String::from("Just some");
+    let st7 = String::from(" words ");
+    let st8 = st6 + &st7;
+    for char in st8.bytes(){
+        println!("st6 + st7 {}", char);
+    }
+}// end of strings 
+
+fn casting(){
+    let int_u8: u8 =5;
+    let int2_u8: u8 =4;
+    let int3_u32: u32 =(int_u8 as u32) + (int2_u8 as u32);
+    println!("int3_u32 = {}", int3_u32);
+}
+
+fn enums(){
+    enum Days{
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
+    impl Days {
+        fn is_weekend(&self) -> bool {
+            match self {
+                Days::Saturday | Days::Sunday => true,
+                _ => false
+            }
+        }
+    }
+    let today:Days = Days::Monday;
+    match today {
+        Days::Monday => println!("Everyone hates Monday"),
+        Days::Tuesday => println!("Donut day"),
+        Days::Wednesday => println!("Hump day"),
+        Days::Thursday => println!("Pay day"),
+        Days::Friday => println!("Almost Weekend"),
+        Days::Saturday => println!("Weekend"),
+        Days::Sunday => println!("Weekend"),
+    }
+    println!("Is today the weekend? {}", today.is_weekend());
+}// end of enums
+
+fn vectors(){
+    let vec1: Vec<i32> = Vec::new();
+    let mut vec2 = vec![1,2,3,4];
+    vec2.push(5);
+    println!("1st : {}", vec2[0]);
+    let second: &i32 = &vec2[1];
+    match vec2.get(1){
+        Some(second) => println!("2nd : {}", second), 
+        None => println!("No 2nd value"),
+    }
+    for i in &mut vec2 {
+        *i *= 2;
+    }
+    for i in &vec2 {
+        println!("{}", i);
+    }
+    println!("Vec Length {}", vec2.len());
+    println!("Pop : {:?}", vec2.pop());
+}
